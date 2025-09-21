@@ -1,0 +1,619 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+
+.logo {
+    font-size: 32px;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* hamburger button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Main content container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quote-calc {
+    text-align: center;
+    font-size: 28px;
+    color: #2c5530;
+    margin: 30px 0 20px 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.par-calc {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.image-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.calc-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Calculator container  */
+.calculator-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calculator-container h2 {
+    text-align: center;
+    color: #2c5530;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Form section styling */
+.form-section h3 {
+    color: #2c5530;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+/* Individual input group styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling for form inputs */
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Text and number input styling */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* change the colour of input box */
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+.calculate-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Results section */
+.results-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    display: none; 
+}
+
+.results-section h3 {
+    color: #2c5530;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Individual result item styling */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Result labels (BMR, TDEE text) */
+.result-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Result values  */
+.result-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Macronutrient section */
+.macros-section {
+    margin-top: 30px;
+}
+
+.macros-section h4 {
+    color: #2c5530;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Individual macro item */
+.macro-item {
+    margin-bottom: 20px;
+}
+
+/* Macro labels and values */
+.macro-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.macro-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Progress bar container */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    width: 0%; 
+}
+
+.carbs-bar {
+    background-color: #ffc107;
+}
+
+.protein-bar {
+    background-color: #28a745;
+}
+
+.fat-bar {
+    background-color: #dc3545;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+/* Newsletter section  */
+.newsletter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.newsletter-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.newsletter-section p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#newsletterEmail {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+#subscribeBtn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+#subscribeBtn:hover {
+  background-color: #0056b3;
+}
+
+.subscription-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.subscription-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.subscription-message.error {
+  background-color: #dc3545;
+  color: white;
+}
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Hamburger button */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* responsive */
+/*  mobile/tablet */
+@media (max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        background-color: #f8f9fa;
+        text-align: center;
+        border-radius: 0;
+        margin: 0;
+        gap: 0;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/*  Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .quote-calc {
+        font-size: 20px;
+        margin: 20px 0 15px 0;
+    }
+    
+    .par-calc {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .calculator-container {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .calculator-container h2 {
+        font-size: 20px;
+    }
+    
+    .input-group input,
+    .input-group select {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .calculate-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    
+    .result-label {
+        margin-bottom: 5px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #newsletterEmail {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    #subscribeBtn {
+        width: 100%;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+}
+
+/* Mobile (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .quote-calc {
+        font-size: 24px;
+    }
+    
+    .par-calc {
+        font-size: 16px;
+    }
+    
+    .calculator-container {
+        padding: 25px;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Tablet  (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        padding: 30px;
+    }
+    
+    .quote-calc {
+        font-size: 30px;
+    }
+    
+    .calculator-container {
+        max-width: 800px;
+        margin: 40px auto;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #newsletterEmail {
+        min-width: 200px;
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+/* Desktop (1025px+)  */
+@media (min-width: 1025px) {
+    .hamburger-btn {
+        display: none;
+    }
+    
+    nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background-color: #e9ecef;
+        box-shadow: none;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 15px;
+    }
+    
+    nav a {
+        padding: 8px 15px;
+        border: none;
+        background-color: transparent;
+        border-radius: 5px;
+        margin: 0;
+    }
+}

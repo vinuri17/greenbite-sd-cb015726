@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mindfulness</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
+    <link rel="stylesheet" href="styles/mindfulness.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="manifest" href="Scripts/manifest.json">
+    <meta name="theme-color" content="#2c5530">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="Images/logo.png" class="logo-image" alt="logo">
+          <h1 class="logo">Green Bite</h1>
+        </div>
+
+        <button id="hamburgerBtn" class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+          <a href="index.html">HOME</a>
+          <a href="Recipe.html">RECIPE</a>
+          <a href="Calculator.html">CALCULATOR</a>
+          <a href="Workouts2.html">WORKOUT</a>
+          <a href="Mindfulness.html">MINDFULNESS</a>
+          <a href="Feedback.html">FEEDBACK</a>
+        </nav>
+      </div>
+    </header>
+    <br>
+    <br>
+
+    <h3><i>“Your mind is your sanctuary — nurture it with stillness.”</i></h3>
+    <br>
+    <p>
+      Mindfulness is the art of slowing down and truly experiencing the present
+      moment. It’s about letting go of distractions, quieting the noise of the
+      past and future, and simply being aware of your breath, your thoughts, and
+      your surroundings. By practicing mindfulness, you create space for peace,
+      clarity, and balance in your everyday life. It’s a gentle reminder that
+      happiness isn’t somewhere far away — it’s here, right now, within you.
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="grid-layout">
+        <img src="Images/Mind1.jpg" alt="Description">
+        <img src="Images/Mind2.jpg" alt="Description">
+        <img src="Images/Mind3.jpg" alt="Description">
+        <img src="Images/Mind4.jpg" alt="Description">
+        <img src="Images/Mind6.jpg" alt="Description">
+        <img src="Images/Mind5.jpg" alt="Description">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!-- Breathing Exercise -->
+    <div class="features-row">
+      <div class="feature-container">
+        <h2 class="feature-title">Pactice Your Breathing Here</h2>
+        <br>
+        <div class="breathing-container">
+          <div class="breathing-circle" id="breathingCircle">
+            <span id="breathingText">Ready To Breath</span>
+          </div>
+          <div>
+            <button class="control-btn start-btn" id="startBreathingBtn">Start Breathing</button>
+            <button class="control-btn stop-btn" id="stopBreathingBtn">Stop Breathing</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timer -->
+     <div class="feature-container"> 
+        <h2 class="feature-title">Timer</h2>
+        <div class="timer-container">
+          <div class="timer-display" id="timerDisplay">00:00</div>
+          <div class="timer-controls">
+            <button class="preset-btn" data-time="300">5 min</button>
+            <button class="preset-btn" data-time="600">10 min</button>
+            <button class="preset-btn" data-time="900">15 min</button>
+            <button class="preset-btn" data-time="1200">20 min</button>
+            <button class="preset-btn" data-time="1800">30 min</button>
+          </div>
+          <div>
+            <button class="control-btn start-btn" id="startTimerBtn">START</button>
+            <button class="control-btn pause-btn" id="pauseTimerBtn">PAUSE</button>
+            <button class="control-btn stop-btn" id="resetTimerBtn">RESET</button>
+          </div>
+        </div>
+     </div>
+    </div>
+    
+     <!-- Ambient Music -->
+      <div class="features-row">
+        <div class="feature-container">
+          <h2 class="feature-title">Ambient Sounds</h2>
+          <div class="sound-container">
+            <div class="sound-card" data-sound="ocean">
+              <h3>Ocean</h3>
+              <p>Calming ocean waves</p>
+            </div>
+            <div class="sound-card" data-sound="rain">
+              <h3>Rain</h3>
+              <p>Gentle Rainfall sound</p>
+            </div>
+            <div class="sound-card" data-sound="forest">
+              <h3>Forest</h3>
+              <p>Birds and nature sound</p>
+            </div>
+            <div class="sound-card" data-sound="river">
+              <h3>River</h3>
+              <p>Gentle Water flowing sound</p>
+            </div>
+          </div>
+          <div class="volume-control">
+            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+            <span id="volumeDisplay">50%</span>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="feature-container">
+          <div class="video-container">
+            <img src="Images/Mindful1.jpg" alt="Mindfulness Meditation scene">
+            <p class="video-description"><b>Be gentle with yourself. There's no rush. Your journey is yours and yours only. Remember, every flower blooms at it's own pace. Learn to love yourself at every stage of your growth.</b></p>
+          </div>
+        </div>
+       
+      </div>
+      
+
+      <!-- Progress -->
+      <div class="feature-container">
+        <h2 class="feature-title">Track Your Progress</h2>
+        <div class="progress-container">
+          <div class="progress-stat">
+            <span class="stat-label">Total Minutes</span>
+            <span class="stat-value" id="totalMinutes">0</span>
+          </div>
+          <div class="progress-stat">
+            <span class="stat-label">Streak Days</span>
+            <span class="stat-value" id="streakDays">1</span>
+          </div>
+          <div class="progress-stat">
+            <span class="stat-label">Longest Session</span>
+            <span class="stat-value" id="longestSession">0 min</span>
+          </div>
+        </div>
+        <button class="control-btn stop-btn" id="resetProgressBtn">Reset Progress</button>
+      </div>
+      <br>
+      
+      <br>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-content">
+
+        <div class="newsletter-section">
+          <h3 class="footer-head">Stay Updated</h3>
+          <p>Subscribe to our newsletter for fitness tips and updates</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="subscriptionMessage" class="subscription-message"></div>
+        </div>
+
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Recipe.html">Recipe</a>
+          <a href="Calculator.html">Calculator</a>
+          <a href="Workouts2.html">Workouts</a>
+          <a href="Mindfulness.html">Mindfulness</a>
+          <a href="Feedback.html">Feedback</a>
+        </div>
+
+        <p>&copy; 2025 Green Bite - Designed by Vinuri</p>
+      </div>
+    </footer>    
+    <script src="Scripts/Mindfulness.js"></script>
+    <script src="Scripts/newsLetter.js"></script>
+    <script src="Scripts/hamburgermenu.js"></script>
+  </body>
+</html>

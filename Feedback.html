@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles/feedback.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    <link rel="manifest" href="Scripts/manifest.json">
+    <meta name="theme-color" content="#2c5530">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="Images/logo.png" class="logo-image" alt="logo">
+          <h1 class="logo">Green Bite</h1>
+        </div>
+
+        <button id="hamburgerBtn" class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+          <a href="index.html">HOME</a>
+          <a href="Recipe.html">RECIPE</a>
+          <a href="Calculator.html">CALCULATOR</a>
+          <a href="Workouts2.html">WORKOUT</a>
+          <a href="Mindfulness.html">MINDFULNESS</a>
+          <a href="Feedback.html">FEEDBACK</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2>Contact & Feedback</h2>
+          <p>
+            We'd love to hear from you! Share your thoughts and connect with us.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="Images/HomePage.jpg" alt="image">
+        </div>
+      </section>
+      <br>
+      <br>
+      <br>
+      <!-- Form -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="sectipn-title">Get In Touch</h2>
+
+          <div class="form-container">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="userName">Full Name *</label>
+                <input type="text" id="userName" name="name" required placeholder="Enter your full name">
+
+                <!-- error msg -->
+                <span class="error-message" id="nameError"></span>
+              </div>
+
+              <!-- email input -->
+              <div class="form-group">
+                <label for="userEmail">Email Address *</label>
+                <input type="email" id="userEmail" name="email" required placeholder="Enter your email address">
+                <span class="error-message" id="emailError"></span>
+              </div>
+
+              <!-- feedback text -->
+              <div class="form-group">
+                <label for="userMessage">Your Message *</label>
+                <textarea id="userMessage" name="message" required placeholder="Share your thought with us" rows="6"></textarea>
+                <span class="error-message" id="messageError"></span>
+              </div>
+
+              <button type="submit" id="submitBtn" class="submit-btn">
+                Send Message
+              </button>
+            </form>
+
+            <div id="confirmationMessage" class="confirmation-message">
+              <i class="fas fa-check-circle"></i>
+              <h3>Thank You!</h3>
+              <p>Your message has been received. We'll get back to you soon!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- map section -->
+      <section class="map-section">
+        <div class="container">
+          <h3>Visit Us</h3>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1046.3203754340498!2d26.683411744099416!3d58.365730164851065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46eb370e40377dd3%3A0xc1a02b13e955beed!2sGreen%20Bite%2C%20Palsami%20tn%2C%2050411%20Tartu%2C%20Estonia!3m2!1d58.3657999!2d26.6838667!5e0!3m2!1sen!2slk!4v1758451524934!5m2!1sen!2slk"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- contact -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div class="contact-details">
+              <h4>Call Us</h4>
+              <p>+94 11 234 5678</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-details">
+              <h4>Email Us</h4>
+              <p>info@greenbite.lk</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-details">
+              <h4>Visit Us</h4>
+              <p>123 Wellness Street, Colombo, Sri Lanka</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+
+      <section class="faq-section">
+        <div class="container">
+          <h3>Frequently Asked Questions</h3>
+
+          <!-- item 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>How quickly will you respond to my message?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We typically respond to all messages withing 24-48 hours during
+                business days.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can I suggest new recipes or workout routines?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! We love hearing suggestions from our community.
+                Please share your ideas through the feedback form.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Is my personal information secure?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we take privacy seriously. Your information is stored
+                securely and never shared with third parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="newsletter-section">
+          <h3 class="footer-head">Stay Updated</h3>
+          <p>Subscribe to our newsletter for fitness tips and updates</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="subscriptionMessage" class="subscription-message"></div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Recipe.html">Recipe</a>
+          <a href="Calculator.html">Calculator</a>
+          <a href="Workouts2.html">Workouts</a>
+          <a href="Mindfulness.html">Mindfulness</a>
+          <a href="Feedback.html">Feedback</a>
+        </div>
+
+        <p>&copy; 2025 Green Bite - Designed by Vinuri</p>
+      </div>
+    </footer>
+
+    <script src="Scripts/feedback2.js"></script>
+    <script src="Scripts/newsLetter.js"></script>
+    <script src="Scripts/hamburgermenu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,995 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo {
+    font-size: 32px;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* hamburger button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+h1 {
+  text-align: center;       
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+h1 br + * {
+  color: #444;
+  font-style: italic;
+}
+p {
+  max-width: 800px;          
+  margin: 0 auto;            
+  text-align: center;       
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+section{
+    background: burlywood;
+}
+h3{
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    margin-top: 40px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px; 
+
+    
+}
+
+.card{
+    width: 325px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+
+    
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 16px;
+
+     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.card-content p{
+   color: black;
+   font-size: 15px;
+   line-height: 1.3; 
+   text-align: justify;
+
+    flex-grow: 1;
+   margin-bottom: 16px;
+}
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: brown;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+
+    margin-top: auto;
+    align-self: flex-start;
+}
+.btn{
+    color: white;
+}
+.menu{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: lightgray;
+}
+
+/* search and filter section */
+.search-filter-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgb(228, 228, 228);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.search-filter-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-controls input, .filter-controls select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.filter-controls button{
+  padding: 10px 20px;
+  background-color: burlywood;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.filter-controls button:hover{
+  background-color: #8b0000;
+}
+
+/* modal style */
+.modal{
+  display: none;
+  position: fixed;
+   z-index: 1000; /* which element appears on top of others when they overlap. */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+   animation: fadeIn 0.3s;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto ;
+  position: relative;
+  animation: slideIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+@keyframes slideIn {
+  from {transform: translateY(-50px); opacity: 0}
+  to{transform: translateY(0); opacity: 1;}
+}
+.close{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover{
+  color: #000;
+}
+.modal h2{
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal img{
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  display: block;
+}
+.ingredients, .instructions{
+  margin: 20px 0;
+}
+.ingredients h3, .instructions h3{
+  color: brown;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.ingredients ul{
+  list-style-type: disc;
+  padding-left: 30px;
+}
+.ingredients li{
+  margin: 5px 0;
+  color: #333;
+}
+.instructions ol{
+  padding-left: 30px;
+}
+.instructions li{
+  margin: 10px 0;
+  color: #333;
+  line-height: 1.5;
+}
+.nutrition {
+  margin: 20px 0;
+}
+.nutrition h3{
+  color: brown;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.nutrition table{
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+.nutrition th, .nutrition td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.nutrition th{
+  background-color: burlywood;
+  font-weight: bold;
+}
+.no-results {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #666;
+}
+/* hidden class for filtering */
+.hidden {
+  display: none !important
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+/* Newsletter section in footer - Enhanced for localStorage */
+.newsletter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.newsletter-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.newsletter-section p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#newsletterEmail {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+#subscribeBtn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Simple animation */
+}
+
+#subscribeBtn:hover {
+  background-color: #0056b3;
+}
+
+.subscription-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.subscription-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.subscription-message.error {
+  background-color: #dc3545;
+  color: white;
+}
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+
+/*  
+workout results section */
+.workout-results {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.workout-results h3 {
+    color: brown;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.exercise-item {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 5px solid brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exercise-info h4 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.exercise-info p {
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.start-exercise-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.start-exercise-btn:hover {
+    background-color: #218838;
+}
+
+/* Hamburger button */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        background-color: #f8f9fa;
+        text-align: center;
+        border-radius: 0;
+        margin: 0;
+        gap: 0;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+    
+    nav a:hover {
+        background-color: #007bff;
+        color: white;
+    }
+}
+
+/*  Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    /* Header adjustments */
+    .header-content {
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .logo-section {
+        gap: 10px;
+    }
+    
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    /* Main content */
+    body > h1 {
+        font-size: 24px;
+        padding: 0 15px;
+        margin: 20px 0;
+        line-height: 1.3;
+    }
+    
+    body > p {
+        font-size: 16px;
+        padding: 0 15px;
+        margin: 15px auto;
+    }
+    
+    /* Search and filter section */
+    .search-filter-section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    
+    .search-filter-section h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .filter-controls input,
+    .filter-controls select,
+    .filter-controls button {
+        width: 100%;
+        max-width: none;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    /* Recipe sections */
+    section h3 {
+        font-size: 20px;
+        margin: 20px 0 15px 0;
+        padding: 0 15px;
+    }
+    
+    .card-container {
+        margin-top: 20px;
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 95%;
+        max-width: 350px;
+        margin: 10px 0;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 12px;
+    }
+    
+    .card-content h3 {
+        font-size: 20px;
+        text-align: left;
+        margin: 0 0 8px 0;
+    }
+    
+    .card-content p {
+        font-size: 14px;
+        text-align: left;
+        margin: 0 0 12px 0;
+    }
+    
+    .card-content .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+        max-height: 85vh;
+    }
+    
+    .modal h2 {
+        font-size: 22px;
+    }
+    
+    .modal img {
+        height: 180px;
+    }
+    
+    /* Footer */
+    .newsletter-section {
+        padding: 15px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #newsletterEmail {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    #subscribeBtn {
+        width: 100%;
+    }
+    
+    .footer-links {
+        margin: 20px 0;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+    
+    .social-icons a {
+        margin: 0 10px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    /* Main content */
+    body > h1 {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+    
+    body > p {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+    
+    /* Search section */
+    .search-filter-section {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .filter-controls input,
+    .filter-controls select,
+    .filter-controls button {
+        width: 100%;
+        max-width: 400px;
+        font-size: 15px;
+    }
+    
+    /* Cards */
+    .card-container {
+        padding: 0 15px;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 400px;
+        margin: 15px auto;
+    }
+    
+    .card img {
+        height: 220px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        margin: 8% auto;
+    }
+    
+    /* Footer */
+    .newsletter-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #newsletterEmail {
+        min-width: 200px;
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+/* Tablet Portrait (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Navigation already handled in the 1024px rule above */
+    
+    /* Main content */
+    body > h1 {
+        font-size: 32px;
+        padding: 0 30px;
+    }
+    
+    body > p {
+        padding: 0 30px;
+        max-width: 700px;
+    }
+    
+    /* Search section */
+    .search-filter-section {
+        margin: 40px 20px;
+        max-width: 700px;
+    }
+    
+    .filter-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .filter-controls input {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+    }
+    
+    .filter-controls select {
+        min-width: 150px;
+    }
+    
+    /* Cards - 2 column layout */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+    
+    .card {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
+    
+    .card img {
+        height: 250px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 80%;
+        max-width: 700px;
+        margin: 5% auto;
+    }
+    
+    /* Footer */
+    .newsletter-section {
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+    
+    .footer-links a {
+        margin: 0 20px;
+    }
+}
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+    .hamburger-btn {
+        display: none;
+    }
+    
+    nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background-color: #e9ecef;
+        box-shadow: none;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 15px;
+    }
+    
+    nav a {
+        padding: 8px 15px;
+        border: none;
+        background-color: transparent;
+        border-radius: 5px;
+        margin: 0;
+    }
+}
+
+/* Tablet Landscape / Small Desktop (1025px - 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    /* Cards - 3 column layout */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+    
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .card img {
+        height: 240px;
+    }
+    
+    /* Search section */
+    .search-filter-section {
+        max-width: 800px;
+    }
+    
+    .filter-controls {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 75%;
+        max-width: 800px;
+    }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    /* Container max-widths */
+    .header-content,
+    .search-filter-section,
+    .card-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Cards - 3 column with more space */
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 80px auto;
+    }
+    
+    .card img {
+        height: 280px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 70%;
+        max-width: 900px;
+    }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .filter-controls button,
+    #subscribeBtn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px 20px;
+    }
+    
+    .hamburger-btn {
+        min-height: 48px;
+        min-width: 48px;
+        padding: 12px;
+    }
+    
+    nav a {
+        min-height: 44px;
+        padding: 15px 20px;
+    }
+    
+        .close {
+            min-height: 44px;
+            min-width: 44px;
+            padding: 8px;
+        }
+  }

@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; 
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo {
+  font-size: 32px;
+  color: #2c5530;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* hamburger button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.content {
+  text-align: center;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero-quote-container{
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #2c5530;
+  position: relative;
+  transition: all 0.8s ease;
+}
+.hero-quote-container h2 {
+    font-size: 28px;
+    color: brown;
+    margin-bottom: 0;
+    transition: all 0.8s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Animation for quote changes*/
+.quote-changing {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Decorative quote icon */
+.hero-quote-container::before {
+    content: '"';
+    font-size: 60px;
+    color: #2c5530;
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: serif;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: brown;
+  transition: opacity 0.5s ease;
+}
+
+.content span {
+  color: darkred;
+  font-weight: bold;
+}
+
+.content p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.cn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.cn:hover {
+  background: darkgreen;
+  transform: translateY(-2px);
+}
+
+.cn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Daily health tips section */
+.daily-tips {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.daily-tips h3 {
+  font-size: 22px;
+  color: #2c5530;
+  margin-bottom: 20px;
+}
+
+.tip-content {
+  font-size: 16px;
+  color: #666;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border-left: 4px solid green;
+}
+
+.tip-date {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+  margin-top: 15px;
+}
+.menu {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: lightgray;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.newsletter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.newsletter-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 24px;
+  
+}
+
+.newsletter-section p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#newsletterEmail {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+#subscribeBtn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#subscribeBtn:hover {
+  background-color: #0056b3;
+}
+
+.subscription-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.subscription-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.subscription-message.error {
+  background-color: #dc3545;
+  color: white;
+}
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* video section */
+.video-section {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.video-section h3 {
+  font-size: 26px;
+  color: #2c5530;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Vision and Mission Section */
+.vision-mission {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 50px 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vision-mission-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vision, .mission {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #2c5530;
+}
+
+.vision h3, .mission h3 {
+  font-size: 22px;
+  color: #2c5530;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.vision p, .mission p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  text-align: left;
+}
+
+/* RESPONSIVE DESIGN - Media Queries */
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+    z-index: 1001;
+  }
+
+  .header-content {
+    position: relative;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  /* Remove header text-align center on mobile */
+  header {
+    text-align: left;
+  }
+
+  .logo-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  /* Other mobile styles... */
+  .content {
+    padding: 0 15px;
+  }
+
+  .hero-quote-container h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #newsletterEmail {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  #subscribeBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .daily-tips {
+    padding: 20px 15px;
+    margin: 30px 10px;
+  }
+
+  .video-section {
+    padding: 30px 15px;
+    margin: 30px 10px;
+  }
+
+  .video-section h3 {
+    font-size: 22px;
+  }
+
+  .vision-mission {
+    padding: 30px 15px;
+    margin: 30px 10px;
+  }
+
+  .vision-mission-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .vision, .mission {
+    padding: 20px;
+  }
+
+  .vision h3, .mission h3 {
+    font-size: 20px;
+  }
+
+  .vision p, .mission p {
+    font-size: 15px;
+  }
+}

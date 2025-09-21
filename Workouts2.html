@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Workouts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
+    <link rel="stylesheet" href="styles/Workout2.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    <link rel="manifest" href="Scripts/manifest.json">
+    <meta name="theme-color" content="#2c5530">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="Images/logo.png" class="logo-image" alt="logo">
+          <h1 class="logo">Green Bite</h1>
+        </div>
+
+        <button id="hamburgerBtn" class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+          <a href="index.html">HOME</a>
+          <a href="Recipe.html">RECIPE</a>
+          <a href="Calculator.html">CALCULATOR</a>
+          <a href="Workouts2.html">WORKOUT</a>
+          <a href="Mindfulness.html">MINDFULNESS</a>
+          <a href="Feedback.html">FEEDBACK</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>"Taking care of your body is the best fit you can wear"</h2>
+        <p>
+          Fitness isn't one-size-fits-all — it's about finding movement you
+          enjoy and can stick to. Whether you love the sweat of cardio, the flow
+          of yoga, the sculpting of Pilates, or the power of strength training,
+          there's a workout for every goal and lifestyle.
+        </p>
+        <h2>~ YOU ARE LIMITLESS ~</h2>
+      </section>
+
+      <section class="generator-section">
+        <div class="form-container">
+          <h3>Create Your Custom Workout</h3>
+          <form id="workoutForm">
+            <div class="form-group">
+              <h4>Select Body Parts:</h4>
+              <div class="checkbox-grid">
+                <label><input type="checkbox" name="bodypart" value="arms">Arms</label>
+                <label><input type="checkbox" name="bodypart" value="legs" >Legs</label>
+                <label><input type="checkbox" name="bodypart" value="core"> Core</label>
+                <label><input type="checkbox" name="bodypart" value="chest">Chest</label>
+                <label><input type="checkbox" name="bodypart" value="back">Back</label>
+                <label><input type="checkbox" name="bodypart" value="fullbody">Full Body</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <h4>Select Equipment:</h4>
+              <div class="checkbox-grid">
+                <label><input type="checkbox" name="equipment" value="none">NoEquipment</label>
+                <label><input type="checkbox" name="equipment" value="dumbbells">Dumbbells</label>
+                <label><input type="checkbox" name="equipment" value="kettlebells">Kettlebells</label>
+                <label><input type="checkbox" name="equipment" value="bands">Resistance Bands</label>
+                <label><input type="checkbox" name="equipment" value="ball">Medicine Ball</label>
+              </div>
+            </div>
+
+            <button type="submit" id="generateBtn">Generate Workout</button>
+          </form>
+        </div>
+      </section>
+
+      <!--  audio elements  -->
+      <audio id="beepSound" preload="auto" style="display: none">
+        <source
+          src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+          type="audio/wav">
+      </audio>
+      <audio id="successSound" preload="auto" style="display: none">
+        <source
+          src="https://www.soundjay.com/misc/sounds/success-1.wav"
+          type="audio/wav">
+      </audio>
+
+      <!-- workout results -->
+      <section id="workoutResults" class="workout-results" style="display: none">
+        <h3>Your Generated Workout Plan</h3>
+        <div id="exerciseList" class="exercise-list"></div>
+      </section>
+
+      <section class="workout-cards">
+        <div class="card">
+          <img src="Images/Pilates.jpg" alt="Pilates">
+          <div class="card-content">
+            <h3>Pilates</h3>
+            <p>
+              Pilates focuses on core strength, flexibility, and overall body
+              awareness. It involves controlled movements and breathing
+              techniques to improve posture and muscle tone.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Images/Yoga.jpg" alt="Yoga">
+          <div class="card-content">
+            <h3>Yoga</h3>
+            <p>
+              Yoga strengthens the body, improves flexibility, and calms the
+              mind. Through mindful movements and breathwork, it promotes
+              balance, reduces stress, and supports overall wellness.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Images/Cardio.jpg" alt="Cardio">
+          <div class="card-content">
+            <h3>Cardio</h3>
+            <p>
+              Cardio workouts get your heart pumping, burn calories, and boost
+              endurance. From running to dance or cycling, cardio improves
+              stamina, energy, and overall heart health.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Images/Strength.jpg" alt="Strength Training">
+          <div class="card-content">
+            <h3>Strength Training</h3>
+            <p>
+              Build muscle, boost metabolism, and increase overall strength with
+              resistance exercises. Using weights, bands, or bodyweight,
+              strength training tones your body.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Images/BodyCombat.jpg" alt="Body Combat">
+          <div class="card-content">
+            <h3>Body Combat</h3>
+            <p>
+              Burn calories, improve endurance, and release stress with Body
+              Combat. Combining martial arts moves with high-energy music, this
+              workout sharpens focus and strengthens your whole body.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Images/dancefit.jpg" alt="Dance Fitness">
+          <div class="card-content">
+            <h3>Dance Fitness</h3>
+            <p>
+              Burn calories, improve coordination, and enhance cardiovascular
+              health with dance fitness. Combining fun rhythms, energetic moves,
+              and aerobic exercise, dance fitness uplifts your mood.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Timer  -->
+    <div id="timerModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h3 id="exerciseName">Exercise Name</h3>
+        <div id="timerDisplay" class="timer">30</div>
+        <p id="exerciseInfo">Exercise description will appear here</p>
+        <div class="timer-controls">
+          <button id="closeTimer" class="close-btn">Close Timer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="newsletter-section">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for fitness tips and updates</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="subscriptionMessage" class="subscription-message"></div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Recipe.html">Recipe</a>
+          <a href="Calculator.html">Calculator</a>
+          <a href="Workouts2.html">Workouts</a>
+          <a href="Mindfulness.html">Mindfulness</a>
+          <a href="Feedback.html">Feedback</a>
+        </div>
+
+        <p>&copy; 2025 Green Bite - Designed by Vinuri</p>
+      </div>
+    </footer>
+
+    <script src="Scripts/workout.js"></script>
+    <script src="Scripts/newsLetter.js"></script>
+    <script src="Scripts/hamburgermenu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recipes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
+    <link rel="stylesheet" href="styles/Recipes.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    <link rel="manifest" href="Scripts/manifest.json">
+    <meta name="theme-color" content="#2c5530">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="Images/logo.png" class="logo-image" alt="logo">
+          <h1 class="logo">Green Bite</h1>
+        </div>
+
+        <button id="hamburgerBtn" class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+          <a href="index.html">HOME</a>
+          <a href="Recipe.html">RECIPE</a>
+          <a href="Calculator.html">CALCULATOR</a>
+          <a href="Workouts2.html">WORKOUT</a>
+          <a href="Mindfulness.html">MINDFULNESS</a>
+          <a href="Feedback.html">FEEDBACK</a>
+        </nav>
+      </div>
+    </header>
+    <br>
+    <br>
+    <h1>
+      Your Kitchen, Your Wellness<br>“Discover meals that bring balance and
+      joy to everyday life.”
+    </h1>
+    <p>
+      Discover delicious and wholesome recipes that make healthy living easy and
+      enjoyable. From quick weeknight meals to indulgent favorites, each recipe
+      is designed to nourish your body, delight your taste buds, and inspire
+      your culinary creativity.
+    </p>
+    <br>
+    <br>
+    <!-- search and filter section -->
+    <div class="search-filter-section">
+      <h3>Find your Perfect Recipe</h3>
+      <div class="filter-controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search recipies by name...">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="steaks">Steaks</option>
+          <option value="salads">Salads</option>
+          <option value="smoothies">Smoothies</option>
+          <option value="snacks">Snacks</option>
+          <option value="meals">Meals</option>
+        </select>
+        <button id="clearFiltersBtn">Clear Filters</button>
+      </div>
+    </div>
+
+    <!-- Recipe container  -->
+    <div id="recipe-sections"></div>
+
+    <!-- Recipe details modal -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <div id="no-results" class="no-results hidden">
+      <p>
+        No recipes found matching your criteria. Try adjusting your search or
+        filter
+      </p>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-content">
+
+        <div class="newsletter-section">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for fitness tips and updates</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <button id="subscribeBtn">Subscribe</button>
+          </div>
+          <div id="subscriptionMessage" class="subscription-message"></div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Recipe.html">Recipe</a>
+          <a href="Calculator.html">Calculator</a>
+          <a href="Workouts2.html">Workouts</a>
+          <a href="Mindfulness.html">Mindfulness</a>
+          <a href="Feedback.html">Feedback</a>
+        </div>
+
+        <p>&copy; 2025 Green Bite - Designed by Vinuri</p>
+      </div>
+    </footer>
+
+    <script src="Scripts/receipe.js"></script>
+    <script src="Scripts/newsLetter.js"></script>
+    <script src="Scripts/hamburgermenu.js"></script>
+  </body>
+</html>

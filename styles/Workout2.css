@@ -1,0 +1,750 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo {
+    font-size: 32px;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* hamburger button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+/* Generator Section */
+.generator-section {
+    margin: 50px 0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin: 30px 0;
+}
+
+.form-group h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+label:hover {
+    background-color: #f8f9fa;
+}
+
+input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+
+#generateBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+#generateBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Workout Results */
+.workout-results {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.workout-results h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.exercise-list {
+    display: grid;
+    gap: 20px;
+}
+
+.exercise-item {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.exercise-info h4 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.exercise-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+.start-timer-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.start-timer-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Workout Cards */
+.workout-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.card-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Timer Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.timer {
+    font-size: 60px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 25px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#exerciseInfo {
+    color: #666;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.timer-controls {
+    margin-top: 30px;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+/* Newsletter section in footer  */
+.newsletter-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.newsletter-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.newsletter-section p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#newsletterEmail {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+#subscribeBtn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+#subscribeBtn:hover {
+  background-color: #0056b3;
+}
+
+.subscription-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.subscription-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.subscription-message.error {
+  background-color: #dc3545;
+  color: white;
+}
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Hamburger button */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* responsive design */
+/*  mobile/tablet */
+@media (max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        background-color: #f8f9fa;
+        text-align: center;
+        border-radius: 0;
+        margin: 0;
+        gap: 0;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .hero {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+    }
+    
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .hero h2 {
+        font-size: 18px;
+    }
+    
+    .form-container {
+        padding: 20px;
+        margin: 0 5px;
+    }
+    
+    .form-container h3 {
+        font-size: 20px;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .workout-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-content h3 {
+        font-size: 18px;
+    }
+    
+    .card-content p {
+        font-size: 14px;
+    }
+    
+    .exercise-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .start-timer-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .timer {
+        font-size: 40px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #newsletterEmail {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    #subscribeBtn {
+        width: 100%;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+}
+
+/* Mobile (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .workout-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .exercise-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Tablet Portrait (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        padding: 30px;
+    }
+    
+    .hero h1 {
+        font-size: 30px;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .workout-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .form-container {
+        max-width: 700px;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #newsletterEmail {
+        min-width: 200px;
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+/* Desktop (1025px+) - Navigation shows normally */
+@media (min-width: 1025px) {
+    .hamburger-btn {
+        display: none;
+    }
+    
+    nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background-color: #e9ecef;
+        box-shadow: none;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 15px;
+    }
+    
+    nav a {
+        padding: 8px 15px;
+        border: none;
+        background-color: transparent;
+        border-radius: 5px;
+        margin: 0;
+    }
+    
+    .workout-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
