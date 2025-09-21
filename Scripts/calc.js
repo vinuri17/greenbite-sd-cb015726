@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if all fields are filled out
         
         if (!age || !gender || !height || !weight || !activityFactor) {
-            alert('Please fill out all fields!'); // If any field is empty or invalid, show an error message
-            return; // Stop the function here if validation fails
+            alert('Please fill out all fields!'); // If any field is empty or invalid, this will show an error message
+            return; 
         }
 
         // Check if the values are valid
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const fat = (tdee * 0.30) / 9;
 
         // Display the results
-        // Math.round() rounds the numbers to whole numbers for easier reading
+        // use Math.round() to round the numbers
         bmrResult.textContent = Math.round(bmr) + ' calories';
         tdeeResult.textContent = Math.round(tdee) + ' calories';
         carbsResult.textContent = Math.round(carbs) + ' grams';
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 100); // 100 milliseconds delay
 
         resultsSection.scrollIntoView({
-            behavior: 'smooth' // Makes the scroll smooth instead of jumping
+            behavior: 'smooth' // smooth scrolling
         });
     });
 

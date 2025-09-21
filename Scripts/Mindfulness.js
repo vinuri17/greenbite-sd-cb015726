@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // // Newsletter elements
-    // const subscribeBtn = document.getElementById('subscribeBtn');
-    // const newsletterEmail = document.getElementById('newsletterEmail');
-    // const subscriptionMessage = document.getElementById('subscriptionMessage');
-
 
     // Breathing Circle
     let breathingInterval;
@@ -174,10 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('streakDays').textContent = progressData.streakDays;
         document.getElementById('longestSession').textContent = progressData.longestSession + ' min';
 
-        // // 
-        // if (document.getElementById('sessionsToday')) {
-        //     document.getElementById('sessionsToday').textContent = progressData.sessionsToday;
-        // }
     }
 
     function saveProgress() {

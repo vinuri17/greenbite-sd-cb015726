@@ -913,27 +913,24 @@ document.addEventListener('DOMContentLoaded', function () {
     setupAllEventListeners();
 });
 
-
-
-// This function sets up all the button clicks and user interactions
 function setupAllEventListeners() {
 
-    // Get the clear filters button
+    // Get  clear filters button
     let clearButton = document.getElementById('clearFiltersBtn');
 
-    // When user types in search box, filter the recipes
+    //  user types in search box, filter the recipes
     searchInput.addEventListener('input', filterRecipesBySearch);
 
-    // When user changes category dropdown, filter the recipes
+    // user changes category dropdown, filter the recipes
     categoryFilter.addEventListener('change', filterRecipesBySearch);
 
-    // When user clicks clear button, reset everything
+    //  user clicks clear button, reset everything
     clearButton.addEventListener('click', clearAllFilters);
 
     // When user clicks X button, close the popup
     closeModalButton.addEventListener('click', closeRecipePopup);
 
-    // When user clicks outside the popup, close it
+    // When user clicks outside the popup, modal will close
     window.addEventListener('click', function (event) {
         if (event.target === modal) {
             closeRecipePopup();
@@ -944,16 +941,16 @@ function setupAllEventListeners() {
 // This function displays all recipes on the page
 function showAllRecipes() {
 
-    // Clear any existing content first
+    // Clear any existing content 
     recipeSections.innerHTML = '';
 
-    // Go through each recipe category (steaks, salads, etc.)
+    // this will filter recipe category (steaks, salads, etc.)
     for (let categoryName in recipeData) {
 
-        // Get all recipes for this category
+        // this will get all recipes
         let categoryRecipes = recipeData[categoryName];
 
-        // Create a section for this category
+        // this will create section for this category
         let categorySection = document.createElement('section');
         categorySection.innerHTML = '<h3><b>' + categoryName.toUpperCase() + '</b></h3>';
 
@@ -962,21 +959,20 @@ function showAllRecipes() {
         cardsContainer.className = 'card-container';
         cardsContainer.setAttribute('data-category', categoryName);
 
-        // Create a card for each recipe in this category
+        // this will create a card for each recipe
         for (let i = 0; i < categoryRecipes.length; i++) {
             let recipe = categoryRecipes[i];
             let recipeCard = createOneRecipeCard(recipe, categoryName);
             cardsContainer.appendChild(recipeCard);
         }
 
-        // Add the cards container to the category section
+        // Adding the cards container to the category section
         categorySection.appendChild(cardsContainer);
 
-        // Add the whole section to the page
+        // Adding the whole section to the page
         recipeSections.appendChild(categorySection);
     }
 
-    // Hide the "no results" message since we're showing recipes
     noResultsMessage.classList.add('hidden');
 }
 
@@ -999,7 +995,7 @@ function createOneRecipeCard(recipe, categoryName) {
         '<a href="#" class="btn">Read More</a>' +
         '</div>';
 
-    // Find the "Read More" button and add a click listener
+    // Finding the "Read More" button 
     let readMoreButton = card.querySelector('.btn');
     readMoreButton.addEventListener('click', function (event) {
         event.preventDefault();  // Stop the link from navigating
@@ -1010,7 +1006,7 @@ function createOneRecipeCard(recipe, categoryName) {
 }
 
 // Search and filter function
-// This function filters recipes based on search text and category
+// a function t filter recipes using key word
 function filterRecipesBySearch() {
 
     // Get what the user typed in the search box
@@ -1023,7 +1019,7 @@ function filterRecipesBySearch() {
     let allCards = document.querySelectorAll('.card');
     let visibleCount = 0;
 
-    // Check each card to see if it should be shown or hidden
+    // to Check card to see if it should be shown or hidden
     for (let i = 0; i < allCards.length; i++) {
         let card = allCards[i];
 
@@ -1035,7 +1031,6 @@ function filterRecipesBySearch() {
         let matchesSearch = recipeName.includes(searchText);
         let matchesCategory = (selectedCategory === 'all' || recipeCategory === selectedCategory);
 
-        // Show or hide the card based on whether it matches
         if (matchesSearch && matchesCategory) {
             card.classList.remove('hidden');
             visibleCount++;
@@ -1057,7 +1052,7 @@ function filterRecipesBySearch() {
         }
     }
 
-    // Show "no results" message if no recipes match
+    // Show error message if no recipes match
     if (visibleCount === 0) {
         noResultsMessage.classList.remove('hidden');
     } else {
@@ -1078,7 +1073,7 @@ function clearAllFilters() {
 }
 
 // Modal pop up
-// This function finds a recipe by its ID number
+// This function will help finds a recipe by its ID number
 function findRecipeById(recipeId) {
 
     // Look through each category
@@ -1094,7 +1089,7 @@ function findRecipeById(recipeId) {
         }
     }
 
-    return null;  // Didn't find it
+    return null;  //if it not found
 }
 
 // This function opens the popup with recipe details
@@ -1103,7 +1098,6 @@ function openRecipePopup(recipeId) {
     // Find the recipe we want to show
     let recipe = findRecipeById(recipeId);
 
-    // If we can't find the recipe, don't do anything
     if (!recipe) {
         return;
     }

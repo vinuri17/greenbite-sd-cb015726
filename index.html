@@ -2,29 +2,29 @@
 <html lang="en">
   <head>
     <title>Green Bite</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
-    <link rel="stylesheet" href="styles/index.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="Images/favicon.jpeg" />
+    <link rel="stylesheet" href="styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer">
-    <link rel="manifest" href="Scripts/manifest.json">
-    <meta name="theme-color" content="#2c5530">
+      referrerpolicy="no-referrer"
+    />
+    <link rel="manifest" href="Scripts/manifest.json" />
+    <meta name="theme-color" content="#2c5530" />
   </head>
   <body>
-    
     <header>
       <div class="header-content">
         <div class="logo-section">
-          <img src="Images/logo.png" class="logo-image" alt="logo">
+          <img src="Images/logo.png" class="logo-image" alt="logo" />
           <h1 class="logo">Green Bite</h1>
         </div>
 
-        <button id="hamburgerBtn" class="hamburger-btn">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -45,47 +45,57 @@
           “Where health and <span>mindfulness</span> nurture your soul.”
         </h2>
       </div>
-      <br>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
       <p class="par">
-        Welcome to GreenBite,
-        your guide to balanced living.<br>
-        We believe true wellness comes from
-        nourishing your body with wholesome meals,<br>
-        staying active through mindful movement,
-        and creating space for peace in everyday life.<br>
-        Explore simple, sustainable ways to feel healthier,<br>
+        Welcome to GreenBite, your guide to balanced living.<br />
+        We believe true wellness comes from nourishing your body with wholesome
+        meals,<br />
+        staying active through mindful movement, and creating space for peace in
+        everyday life.<br />
+        Explore simple, sustainable ways to feel healthier,<br />
         stronger, and more energized — inside and out.
       </p>
 
       <a class="cn" id="joinBtn" href="#footer">JOIN US</a>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <!-- video -->
     <div class="video-section">
       <h3>Discover Your Wellnes Journey</h3>
       <div class="video-container">
         <video controls loop autoplay muted>
-          <source src="Images/HomeVid.mp4" type="video/mp4">
+          <source src="Images/HomeVid.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <!-- vision and mision -->
     <div class="vision-mission">
       <div class="vision-mission-container">
         <div class="vision">
           <h3>Our Vision</h3>
-          <p>To create a worls where wellness is accessible, sustainable, and joyful for everyone. We envision communities where healthy living is the natural choice, supported by knowledge, mindfulness, and genuine care for both personal and planetary well-being.</p>
+          <p>
+            To create a worls where wellness is accessible, sustainable, and
+            joyful for everyone. We envision communities where healthy living is
+            the natural choice, supported by knowledge, mindfulness, and genuine
+            care for both personal and planetary well-being.
+          </p>
         </div>
         <div class="mission">
           <h3>Our Mission</h3>
-          <p>At Green Bite, we empower individuals to embrace holistic wellness through nutritious recipes, mindful movement, and mental well-being practices. We provide practical tools, inspiration, and community support to help you build lasting healthy habits that nourish your body, mind, and spirit.</p>
+          <p>
+            At Green Bite, we empower individuals to embrace holistic wellness
+            through nutritious recipes, mindful movement, and mental well-being
+            practices. We provide practical tools, inspiration, and community
+            support to help you build lasting healthy habits that nourish your
+            body, mind, and spirit.
+          </p>
         </div>
       </div>
     </div>
@@ -105,20 +115,32 @@
           <h3>Stay Updated</h3>
           <p>Subscribe to our newsletter for fitness tips and updates</p>
           <div class="newsletter-form">
-            <input type="email" id="newsletterEmail" placeholder="Enter your email">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+            />
             <button id="subscribeBtn">Subscribe</button>
           </div>
           <div id="subscriptionMessage" class="subscription-message"></div>
         </div>
 
         <div class="social-icons">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fab fa-instagram"></i
+          ></a>
           <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
           <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
         </div>
-        
-        <div class="footer-links">
+
+        <div
+          class="footer-links"
+          role="navigation"
+          aria-label="Footer navigation"
+        >
           <a href="index.html">Home</a>
           <a href="Recipe.html">Recipe</a>
           <a href="Calculator.html">Calculator</a>

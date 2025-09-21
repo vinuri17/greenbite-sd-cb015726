@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to check if email looks correct
     function checkEmail(email) {
-        // Simple check - must have @ and . in the right places
         if (email.indexOf('@') > 0 && email.indexOf('.') > email.indexOf('@')) {
             return true;
         }
@@ -24,11 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to save email to localStorage 
     function saveEmail(email) {
-        // Get saved emails (if any exist)
+        // get already saved emails if any existed 
         const savedEmails = localStorage.getItem('newsletterEmails');
         let emailList = [];
 
-        // If there are saved emails, get them
         if (savedEmails) {
             emailList = JSON.parse(savedEmails);
         }
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // If not already saved, add it
+        // if it's not saved we can save it from
         if (!alreadySaved) {
             emailList.push(email);
             localStorage.setItem('newsletterEmails', JSON.stringify(emailList));
@@ -58,15 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
         subscriptionMessage.className = 'subscription-message ' + type;
         subscriptionMessage.style.display = 'block';
 
-        // Hide message after 3 seconds
+        // message will be saved
         setTimeout(function () {
             subscriptionMessage.style.display = 'none';
         }, 3000);
     }
 
-    // When Subscribe button is clicked
     subscribeBtn.addEventListener('click', function () {
-        const email = newsletterEmail.value.trim(); // Get email and remove spaces
+        const email = newsletterEmail.value.trim(); // we can remove extra space
 
         // Check if email is empty
         if (email === '') {
@@ -74,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Check if email looks correct
+        // Check if email looks ok
         if (!checkEmail(email)) {
             showMessage('Please enter a valid email address.', 'error');
             return;
@@ -91,14 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // When Enter key is pressed in email box
     newsletterEmail.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
-            subscribeBtn.click(); // Same as clicking subscribe button
+            subscribeBtn.click(); 
         }
     });
 
-    // Function to get all saved emails (for testing)
+    // Function to get all saved emails
     function getAllEmails() {
         const savedEmails = localStorage.getItem('newsletterEmails');
         if (savedEmails) {

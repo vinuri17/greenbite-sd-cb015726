@@ -4,13 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const navMenu = document.getElementById('navMenu');
 
-    // Check if elements exist 
     if (hamburgerBtn && navMenu) {
 
-        // Add click event listener to hamburger button
         hamburgerBtn.addEventListener('click', function () {
 
-            // Toggle the active class on navigation menu
             navMenu.classList.toggle('active');
 
             // Change hamburger icon to X or back to hamburger

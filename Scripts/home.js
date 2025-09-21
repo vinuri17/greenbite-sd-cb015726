@@ -91,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function () {
         currentDateElement.textContent = formattedDate;
     }
 
-    // Set up JOIN US button functionality
+    // Set up the JOIN US button 
     function setupJoinButton() {
         joinBtn.addEventListener('click', function (event) {
             event.preventDefault(); 
 
-            // Scroll to footer smoothly
+            // this Scroll to footer smoothly
             const footer = document.getElementById('footer');
             footer.scrollIntoView({
                 behavior: 'smooth'
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //  start quote rotation
+    //  quote rotation
     function startQuoteRotation() {
         // Change quotes every 5 seconds (5000 milliseconds)
         setInterval(changeQuote, 5000);
